@@ -2,8 +2,7 @@ package Utilidades;
 
 import java.io.*;
 import java.net.MalformedURLException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 
 import org.openqa.selenium.By;
 import com.itextpdf.text.*;
@@ -128,7 +127,7 @@ public class GenerarReportePdf {
 		
 		public void crearbodyError(By locator, String rutaImagen, String msnError) throws  DocumentException, MalformedURLException, IOException
 		{
-			int imagenesAgregadasEnPaginaActual = 0;
+			
 			
 			//OBTENER EL NOMBRE DEL LOCALIZADOR
 			String locator1=locator.toString();
@@ -150,13 +149,9 @@ public class GenerarReportePdf {
 			imagen.scaleToFit(500,800);
 			imagen.setAlignment(Chunk.ALIGN_LEFT);
 			
-			if (imagenesAgregadasEnPaginaActual >= 2) {
-		        // Si se alcanza el límite, comenzar una nueva página aquí
-		        documento.newPage();
-		        imagenesAgregadasEnPaginaActual = 0; // Reiniciar el contador para la nueva página
-		    }
+			
 			documento.add(imagen);
-			imagenesAgregadasEnPaginaActual++;
+			
 			
 			//MENSAJE ERROR
 			//DAR FORMATO A LA FUENTE
