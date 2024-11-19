@@ -1,15 +1,12 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package starter.stepdefinitions;
+
 
 import io.cucumber.java.Before;
 import io.cucumber.java.ParameterType;
 import net.serenitybdd.screenplay.Actor;//Define a los actores en el framework Screenplay
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+
 
 public class ParameterDefinitions {
     public ParameterDefinitions() {
@@ -25,3 +22,4 @@ public class ParameterDefinitions {
         OnStage.setTheStage(new OnlineCast());
     }
 }
+
